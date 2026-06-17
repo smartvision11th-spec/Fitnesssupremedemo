@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- ===== SEO META TAGS ===== -->
+  <title>FITNESS SUPREME GYM | Elite Fitness & Transformation Center</title>
+  <meta name="description" content="Premium fitness training, weight loss, muscle building and transformation programs at FITNESS SUPREME GYM. Join the elite.">
+  <meta name="keywords" content="FITNESS SUPREME GYM, Gym, Fitness, Personal Training, Weight Loss, Muscle Building">
+  <meta name="author" content="FITNESS SUPREME GYM">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FITNESS SUPREME GYM | Elite Fitness & Transformation Center">
+  <meta property="og:description" content="Premium fitness training, weight loss, muscle building and transformation programs.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/fithero.jpg">
+
+  <!-- Favicon (optional - replace with real favicon) -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+
+  <!-- Google Fonts: Display + Body + Utility -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- LOADING SCREEN                                          -->
+  <!-- ===================================================== -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <h1 class="loader-logo">FITNESS<span>SUPREME</span>GYM</h1>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderBarFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- ANIMATED PARTICLE CANVAS (Hero background ambience)     -->
+  <!-- ===================================================== -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ===================================================== -->
+  <!-- NAVBAR                                                  -->
+  <!-- ===================================================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">FITNESS<span>SUPREME</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active-link">Home</a></li>
+        <li><a href="#owner" class="nav-link">About Owner</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#bmi" class="nav-link">BMI Calculator</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="join-btn-nav" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Join Now</button>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================================================== -->
+  <!-- HERO SECTION                                            -->
+  <!-- ===================================================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg" style="background-image: url('images/fithero.jpg');"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-blur-light hero-blur-1"></div>
+    <div class="hero-blur-light hero-blur-2"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">ELITE PERFORMANCE TRAINING CENTER</p>
+      <h1 class="hero-headline">Transform Your Body at <span>FITNESS SUPREME GYM</span></h1>
+      <p class="hero-subheadline">Elite Performance, Strength, Discipline and Transformation.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
+          JOIN NOW
+        </button>
+        <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+          OUR SERVICES
+        </button>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- ABOUT GYM / STATS SECTION                               -->
+  <!-- ===================================================== -->
+  <section class="about-gym" id="about">
+    <div class="section-container">
+      <div class="stats-grid">
+        <div class="stat-card glass-card">
+          <i class="fa-solid fa-people-group stat-icon"></i>
+          <h3 class="stat-number" data-target="1200">0</h3>
+          <p class="stat-label">Members</p>
+        </div>
+        <div class="stat-card glass-card">
+          <i class="fa-solid fa-dumbbell stat-icon"></i>
+          <h3 class="stat-number" data-target="18">0</h3>
+          <p class="stat-label">Trainers</p>
+        </div>
+        <div class="stat-card glass-card">
+          <i class="fa-solid fa-weight-hanging stat-icon"></i>
+          <h3 class="stat-number" data-target="60">0</h3>
+          <p class="stat-label">Machines</p>
+        </div>
+        <div class="stat-card glass-card">
+          <i class="fa-solid fa-fire stat-icon"></i>
+          <h3 class="stat-number" data-target="850">0</h3>
+          <p class="stat-label">Transformations</p>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="feature-pill"><i class="fa-solid fa-check"></i> Premium Equipment</div>
+        <div class="feature-pill"><i class="fa-solid fa-check"></i> Certified Trainers</div>
+        <div class="feature-pill"><i class="fa-solid fa-check"></i> Modern Environment</div>
+        <div class="feature-pill"><i class="fa-solid fa-check"></i> Transformation Programs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- OWNER SECTION                                           -->
+  <!-- ===================================================== -->
+  <section class="owner-section" id="owner">
+    <div class="section-container owner-grid">
+      <div class="owner-image-wrap reveal">
+        <div class="owner-glow"></div>
+        <img src="images/fitowner.jpg" alt="FITNESS SUPREME GYM Owner - Founder and Fitness Coach" class="owner-image">
+      </div>
+      <div class="owner-text reveal">
+        <p class="section-eyebrow">MEET THE FOUNDER</p>
+        <h2 class="section-title">FITNESS SUPREME GYM <span>OWNER</span></h2>
+        <p class="owner-designation">Founder &amp; Fitness Coach</p>
+        <p class="owner-bio">
+          Built on discipline, driven by results. With years of hands-on coaching experience,
+          our founder created FITNESS SUPREME GYM to be more than a gym — a place where elite
+          performance is the standard and every member's transformation is the mission.
+        </p>
+        <div class="owner-buttons">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Now</button>
+          <button class="btn btn-outline" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Join Today</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- SERVICES SECTION                                        -->
+  <!-- ===================================================== -->
+  <section class="services-section" id="services">
+    <div class="section-container">
+      <p class="section-eyebrow center">WHAT WE OFFER</p>
+      <h2 class="section-title center">Our <span>Services</span></h2>
+
+      <div class="services-grid">
+        <div class="service-card glass-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-dumbbell"></i></div>
+          <h3>Weight Training</h3>
+          <p>Build raw strength with structured progressive overload programs guided by expert coaches.</p>
+        </div>
+        <div class="service-card glass-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <h3>Fat Loss Program</h3>
+          <p>Targeted fat-burning routines combined with nutrition guidance for visible, lasting results.</p>
+        </div>
+        <div class="service-card glass-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Personal Training</h3>
+          <p>One-on-one coaching tailored to your goals, pace, and fitness level.</p>
+        </div>
+        <div class="service-card glass-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Cardio Training</h3>
+          <p>Improve endurance and heart health with high-energy cardio sessions.</p>
+        </div>
+        <div class="service-card glass-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Muscle Building</h3>
+          <p>Science-backed hypertrophy training to pack on lean, functional muscle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- PRICING SECTION                                         -->
+  <!-- ===================================================== -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-container">
+      <p class="section-eyebrow center">MEMBERSHIP PLANS</p>
+      <h2 class="section-title center">Choose Your <span>Plan</span></h2>
+
+      <div class="pricing-grid">
+        <div class="price-card glass-card reveal" data-plan="Basic Plan" data-price="₹399">
+          <h3 class="price-plan-name">Basic Plan</h3>
+          <p class="price-amount">₹399<span>/mo</span></p>
+          <ul class="price-features">
+            <li><i class="fa-solid fa-check"></i> Gym Floor Access</li>
+            <li><i class="fa-solid fa-check"></i> Locker Facility</li>
+            <li><i class="fa-solid fa-check"></i> Basic Equipment</li>
+          </ul>
+          <button class="btn btn-outline price-select-btn" data-plan="Basic Plan" data-price="₹399">Select Plan</button>
+        </div>
+
+        <div class="price-card glass-card featured reveal" data-plan="Standard Plan" data-price="₹699">
+          <div class="featured-badge">MOST POPULAR</div>
+          <h3 class="price-plan-name">Standard Plan</h3>
+          <p class="price-amount">₹699<span>/mo</span></p>
+          <ul class="price-features">
+            <li><i class="fa-solid fa-check"></i> Full Gym Access</li>
+            <li><i class="fa-solid fa-check"></i> Group Classes</li>
+            <li><i class="fa-solid fa-check"></i> Diet Consultation</li>
+            <li><i class="fa-solid fa-check"></i> Locker Facility</li>
+          </ul>
+          <button class="btn btn-primary price-select-btn" data-plan="Standard Plan" data-price="₹699">Select Plan</button>
+        </div>
+
+        <div class="price-card glass-card reveal" data-plan="Premium Plan" data-price="₹1499">
+          <h3 class="price-plan-name">Premium Plan</h3>
+          <p class="price-amount">₹1499<span>/mo</span></p>
+          <ul class="price-features">
+            <li><i class="fa-solid fa-check"></i> Full Gym Access</li>
+            <li><i class="fa-solid fa-check"></i> Personal Trainer</li>
+            <li><i class="fa-solid fa-check"></i> Diet & Nutrition Plan</li>
+            <li><i class="fa-solid fa-check"></i> Priority Booking</li>
+            <li><i class="fa-solid fa-check"></i> All Group Classes</li>
+          </ul>
+          <button class="btn btn-outline price-select-btn" data-plan="Premium Plan" data-price="₹1499">Select Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- GALLERY SECTION                                         -->
+  <!-- ===================================================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-container">
+      <p class="section-eyebrow center">INSIDE THE GYM</p>
+      <h2 class="section-title center">Our <span>Gallery</span></h2>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-img="images/fitgallery1.jpg">
+          <img src="images/fitgallery1.jpg" alt="FITNESS SUPREME GYM training floor" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-img="images/fitgallery2.jpg">
+          <img src="images/fitgallery2.jpg" alt="FITNESS SUPREME GYM members training" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-img="images/fithero.jpg">
+          <img src="images/fithero.jpg" alt="FITNESS SUPREME GYM facility" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-img="images/fitowner.jpg">
+          <img src="images/fitowner.jpg" alt="FITNESS SUPREME GYM coach" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-img="images/fitgallery3.jpg">
+          <img src="images/fitgallery3.jpg" alt="FITNESS SUPREME GYM equipment" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-img="images/fitgallery4.jpg">
+          <img src="images/fitgallery4.jpg" alt="FITNESS SUPREME GYM transformation" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Gallery preview" id="lightboxImg">
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- BMI CALCULATOR SECTION                                  -->
+  <!-- ===================================================== -->
+  <section class="bmi-section" id="bmi">
+    <div class="section-container">
+      <p class="section-eyebrow center">KNOW YOUR BODY</p>
+      <h2 class="section-title center">BMI <span>Calculator</span></h2>
+
+      <div class="bmi-card glass-card">
+        <div class="bmi-inputs">
+          <div class="input-group">
+            <label for="bmiHeight">Height (cm)</label>
+            <input type="number" id="bmiHeight" placeholder="e.g. 175" min="50" max="250">
+          </div>
+          <div class="input-group">
+            <label for="bmiWeight">Weight (kg)</label>
+            <input type="number" id="bmiWeight" placeholder="e.g. 70" min="20" max="300">
+          </div>
+        </div>
+        <button class="btn btn-primary" id="calcBmiBtn">Calculate BMI</button>
+
+        <div class="bmi-result" id="bmiResult">
+          <p class="bmi-value" id="bmiValue">--</p>
+          <p class="bmi-category" id="bmiCategory">Enter your height and weight</p>
+          <p class="bmi-suggestion" id="bmiSuggestion"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- REVIEWS SECTION                                         -->
+  <!-- ===================================================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-container">
+      <p class="section-eyebrow center">MEMBER STORIES</p>
+      <h2 class="section-title center">What Our <span>Members Say</span></h2>
+
+      <div class="reviews-slider-wrap">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card glass-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"FITNESS SUPREME GYM completely changed how I train. Lost 12kg in 4 months with the fat loss program."</p>
+            <p class="review-author">— Rohit Sharma</p>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Best trainers in the city. The personal training sessions at FITNESS SUPREME GYM are worth every rupee."</p>
+            <p class="review-author">— Ananya Verma</p>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Clean, modern equipment and a great atmosphere. FITNESS SUPREME GYM is the real deal."</p>
+            <p class="review-author">— Karan Mehta</p>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Gained 6kg of lean muscle in 5 months. The muscle building program actually works."</p>
+            <p class="review-author">— Vikram Singh</p>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Supportive staff, premium machines, and a coach who actually cares about your goals."</p>
+            <p class="review-author">— Priya Nair</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- BOOKING FORM / CONTACT SECTION                          -->
+  <!-- ===================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="section-container contact-grid">
+
+      <div class="contact-form-wrap reveal">
+        <p class="section-eyebrow">GET STARTED</p>
+        <h2 class="section-title">Book Your <span>Spot</span></h2>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="form-group floating">
+            <input type="text" id="fullName" name="fullName" required placeholder=" ">
+            <label for="fullName">Full Name</label>
+            <span class="error-msg" id="err-fullName"></span>
+          </div>
+
+          <div class="form-group floating">
+            <input type="tel" id="mobileNumber" name="mobileNumber" required placeholder=" " pattern="[0-9]{10}" maxlength="10">
+            <label for="mobileNumber">Mobile Number</label>
+            <span class="error-msg" id="err-mobileNumber"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group floating select-group">
+              <select id="gender" name="gender" required>
+                <option value="" disabled selected hidden></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+              <label for="gender">Gender</label>
+              <span class="error-msg" id="err-gender"></span>
+            </div>
+
+            <div class="form-group floating">
+              <input type="number" id="age" name="age" required placeholder=" " min="10" max="100">
+              <label for="age">Age</label>
+              <span class="error-msg" id="err-age"></span>
+            </div>
+          </div>
+
+          <div class="form-group floating select-group">
+            <select id="fitnessGoal" name="fitnessGoal" required>
+              <option value="" disabled selected hidden></option>
+              <option value="Weight Loss">Weight Loss</option>
+              <option value="Muscle Gain">Muscle Gain</option>
+              <option value="General Fitness">General Fitness</option>
+              <option value="Strength Training">Strength Training</option>
+              <option value="Endurance">Endurance</option>
+            </select>
+            <label for="fitnessGoal">Fitness Goal</label>
+            <span class="error-msg" id="err-fitnessGoal"></span>
+          </div>
+
+          <div class="form-group floating select-group">
+            <select id="services" name="services" required>
+              <option value="" disabled selected hidden></option>
+              <option value="Weight Training">Weight Training</option>
+              <option value="Fat Loss Program">Fat Loss Program</option>
+              <option value="Personal Training">Personal Training</option>
+              <option value="Cardio Training">Cardio Training</option>
+              <option value="Muscle Building">Muscle Building</option>
+            </select>
+            <label for="services">Services</label>
+            <span class="error-msg" id="err-services"></span>
+          </div>
+
+          <div class="form-group floating select-group">
+            <select id="pricingPlan" name="pricingPlan" required>
+              <option value="" disabled selected hidden></option>
+              <option value="Basic Plan">Basic Plan - ₹399</option>
+              <option value="Standard Plan">Standard Plan - ₹699</option>
+              <option value="Premium Plan">Premium Plan - ₹1499</option>
+            </select>
+            <label for="pricingPlan">Pricing Plan</label>
+            <span class="error-msg" id="err-pricingPlan"></span>
+          </div>
+
+          <div class="form-group floating">
+            <input type="date" id="joiningDate" name="joiningDate" required placeholder=" ">
+            <label for="joiningDate">Date Of Joining</label>
+            <span class="error-msg" id="err-joiningDate"></span>
+          </div>
+
+          <div class="form-group floating">
+            <input type="text" id="address" name="address" required placeholder=" ">
+            <label for="address">Address</label>
+            <span class="error-msg" id="err-address"></span>
+          </div>
+
+          <div class="form-group floating">
+            <textarea id="message" name="message" rows="3" placeholder=" "></textarea>
+            <label for="message">Additional Message</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit-btn">
+            <i class="fa-brands fa-whatsapp"></i> Submit & Send via WhatsApp
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info-wrap reveal">
+        <div class="map-card glass-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.500!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!5e0!3m2!1sen!2sin!4v1700000000000"
+            width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="FITNESS SUPREME GYM Location">
+          </iframe>
+        </div>
+
+        <div class="contact-details-card glass-card">
+          <h3>Visit Us</h3>
+          <p><i class="fa-solid fa-location-dot"></i> 123 Strength Avenue, Your City, India</p>
+          <p><i class="fa-solid fa-phone"></i> +91 98974 17774</p>
+          <p><i class="fa-solid fa-clock"></i> Mon - Sun: 5:00 AM - 11:00 PM</p>
+
+          <div class="social-icons">
+            <a href="https://wa.me/919897417774" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- BLOG SECTION                                            -->
+  <!-- ===================================================== -->
+  <section class="blog-section" id="blog">
+    <div class="section-container">
+      <p class="section-eyebrow center">FROM THE BLOG</p>
+      <h2 class="section-title center">Tips &amp; <span>Guides</span></h2>
+
+      <div class="blog-grid">
+        <div class="blog-card glass-card reveal">
+          <div class="blog-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3>Best Workout Tips</h3>
+          <p>Simple, effective habits to get more out of every session at the gym.</p>
+        </div>
+        <div class="blog-card glass-card reveal">
+          <div class="blog-icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3>Diet Plans</h3>
+          <p>Nutrition strategies that fuel performance and support recovery.</p>
+        </div>
+        <div class="blog-card glass-card reveal">
+          <div class="blog-icon"><i class="fa-solid fa-dumbbell"></i></div>
+          <h3>Muscle Gain Guide</h3>
+          <p>A practical roadmap for building lean muscle the right way.</p>
+        </div>
+        <div class="blog-card glass-card reveal">
+          <div class="blog-icon"><i class="fa-solid fa-fire"></i></div>
+          <h3>Fat Loss Tips</h3>
+          <p>Sustainable approaches to cutting fat without losing strength.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- FOOTER                                                  -->
+  <!-- ===================================================== -->
+  <footer class="footer">
+    <div class="section-container footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-logo">FITNESS<span>SUPREME</span></h3>
+        <p>Elite performance, strength, discipline and transformation — under one roof.</p>
+        <div class="social-icons">
+          <a href="https://wa.me/919897417774" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Strength Avenue, Your City, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 98974 17774</p>
+        <p><i class="fa-solid fa-envelope"></i> info@fitnesssupremegym.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.500!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!5e0!3m2!1sen!2sin!4v1700000000000"
+            width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="FITNESS SUPREME GYM Map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> FITNESS SUPREME GYM. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back To Top -->
+  <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919897417774?text=Hi%2C%20I%27m%20interested%20in%20joining%20FITNESS%20SUPREME%20GYM" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
